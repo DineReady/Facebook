@@ -1,7 +1,8 @@
 import React from "react";
+import "./index.css";
 
 function App() {
-    return <div className="App">client</div>;
+    return <div className="text-red-500">client</div>;
 }
 
 export default App;
