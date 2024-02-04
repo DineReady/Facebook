@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .main-section {
+        @apply w-screen h-screen m-0 p-10 text-5xl flex justify-start items-center flex-col gap-y-10;
+    }
+    .logo {
+        @apply w-screen max-h-40;
+    }
+    .response-text {
+        @apply text-3xl font-semibold text-center;
+    }
+}
+
+@layer utilities {
+    .bg-primary {
+        background-color: #0038ff;
+    }
+    .text-primary {
+        color: #0038ff;
+    }
+    .text-secondary {
+        color: #b1b1b1;
+    }
+}
