@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
-import PreparationImage from "./images/food.webp";
-import Done from "./images/correct.png";
-import Logo from "./images/logo.svg";
-import { OrderStatus } from "./types/types";
+import "./app.css";
+import { OrderStatus } from "./types";
+import { Done, Logo, PreparationImage } from "./assets";
 
-function App() {
-    const [orderStatus, setOrderStatus] = useState(OrderStatus.PREPARATION);
-    const [image, setImage] = useState(PreparationImage);
+export default function App(): JSX.Element {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [orderStatus, setOrderStatus] = useState<string>(
+        OrderStatus.PREPARATION,
+    );
+    const [image, setImage] = useState<string>(PreparationImage);
 
     useEffect(() => {
         setImage(
@@ -16,12 +17,10 @@ function App() {
     }, [orderStatus]);
 
     return (
-        <div className="waiting-screen text-5xl flex justify-center items-center flex-col">
-            <img className="logo" src={Logo} alt="" />
-            <img className="orderImage" src={image} alt="" />
-            <h1>{orderStatus}</h1>
-        </div>
+        <main className="max-w-screen max-h-screen m-0 p-10 text-5xl flex justify-center items-center flex-col">
+            <img className="w-20" src={Logo} alt="logo" />
+            <img className="orderImage" src={image} alt="order_img" />
+            <h1 className="text-2xl">{orderStatus}</h1>
+        </main>
     );
 }
-
-export default App;
