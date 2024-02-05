@@ -1,31 +1,32 @@
 import React, { useState, useEffect } from "react";
 import "./globals.css";
 import { OrderStatus } from "./types";
-import { Done, Logo, PreparationImage } from "./assets";
-import Lottie from "react-lottie";
-import animationData from "./assets/food.json";
+import Logo from "./assets/logo.svg";
+import Lottie, { Options } from "react-lottie";
+import PreparingAnimation from "./assets/food.json";
+import DoneAnimation from "./assets/done.json";
 
 export default function App(): JSX.Element {
     const [orderStatus, setOrderStatus] = useState(OrderStatus.PREPARATION);
-    const [image, setImage] = useState(PreparationImage);
+    const [image, setImage] = useState<any>(PreparingAnimation);
 
     useEffect(() => {
         setImage(
-            orderStatus === OrderStatus.PREPARATION ? PreparationImage : Done,
+            orderStatus === OrderStatus.PREPARATION
+                ? PreparingAnimation
+                : DoneAnimation,
         );
     }, [orderStatus]);
 
-    const defaultOptions = {
+    const defaultOptions: Options = {
         loop: true,
         autoplay: true,
-        animationData: animationData,
-        renderer: "svg",
+        animationData: image,
     };
 
     return (
         <main className="main-section">
             <img className="logo" src={Logo} alt="logo" />
-            {/* <img src={image} alt="order_img" /> */}
             <div>
                 <Lottie options={defaultOptions} height={500} width={500} />
             </div>
