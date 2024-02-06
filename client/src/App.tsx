@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./globals.css";
 import { OrderStatus } from "./types";
 import Lottie, { Options } from "react-lottie";
-import {
-    PreparationImage as PreparingAnimation,
-    Done as DoneAnimation,
-    Logo,
-} from "./assets";
+import { DoneAnimation, Logo, PreparingAnimation } from "./assets";
 
 export default function App(): JSX.Element {
     const [orderStatus] = useState<OrderStatus>(OrderStatus.PREPARATION);
