@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./globals.css";
 import { OrderStatus } from "./types";
-import Logo from "./assets/logo.svg";
 import Lottie, { Options } from "react-lottie";
-import PreparingAnimation from "./assets/food.json";
-import DoneAnimation from "./assets/done.json";
+import {
+    PreparationImage as PreparingAnimation,
+    Done as DoneAnimation,
+    Logo,
+} from "./assets";
 
 export default function App(): JSX.Element {
-    const [orderStatus, setOrderStatus] = useState(OrderStatus.PREPARATION);
-    const [image, setImage] = useState<any>(PreparingAnimation);
+    const [orderStatus] = useState<OrderStatus>(OrderStatus.PREPARATION);
+    const [image, setImage] =
+        useState<Options["animationData"]>(PreparingAnimation);
 
     useEffect(() => {
         setImage(
