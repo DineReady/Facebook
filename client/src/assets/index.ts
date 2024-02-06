@@ -1,5 +1,5 @@
-import Done from "./correct.png";
+import DoneAnimation from "./done.json";
 import Logo from "./logo.svg";
-import PreparationImage from "./food.webp";
+import PreparingAnimation from "./food.json";
 
-export { Done, Logo, PreparationImage };
+export { DoneAnimation, Logo, PreparingAnimation };
