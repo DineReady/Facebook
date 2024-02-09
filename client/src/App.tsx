@@ -2,25 +2,37 @@ import React, { useState, useEffect } from "react";
 import "./globals.css";
 import { OrderStatus } from "./types";
 import Lottie, { Options } from "react-lottie";
-import { DoneAnimation, Logo, PreparingAnimation } from "./assets";
+import {
+    DoneAnimation,
+    Logo,
+    PreparingAnimation,
+    firstAnimation,
+} from "./assets";
 
 export default function App(): JSX.Element {
-    const [orderStatus] = useState<OrderStatus>(OrderStatus.PREPARATION);
-    const [image, setImage] =
-        useState<Options["animationData"]>(PreparingAnimation);
+    const [orderStatus] = useState<OrderStatus>(OrderStatus.READY);
+    const [animations] = useState<Options["animationData"][]>([
+        PreparingAnimation,
+        firstAnimation,
+    ]);
+    const [currentAnimation, setCurrentAnimation] = useState<number>(0);
 
     useEffect(() => {
-        setImage(
-            orderStatus === OrderStatus.PREPARATION
-                ? PreparingAnimation
-                : DoneAnimation,
-        );
-    }, [orderStatus]);
+        if (orderStatus === OrderStatus.READY) {
+            setCurrentAnimation(-1); // -1 oznacza, że będzie wyświetlana animacja "Done"
+        } else {
+            const randomIndex = Math.floor(Math.random() * animations.length);
+            setCurrentAnimation(randomIndex);
+        }
+    }, [orderStatus, animations]);
 
     const defaultOptions: Options = {
         loop: true,
         autoplay: true,
-        animationData: image,
+        animationData:
+            currentAnimation === -1
+                ? DoneAnimation
+                : animations[currentAnimation],
     };
 
     return (
