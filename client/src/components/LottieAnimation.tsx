@@ -1,7 +1,11 @@
 import React from "react";
 import Lottie, { Options } from "react-lottie";
 
-const LottieAnimation = ({ animationData }: { animationData: any }) => {
+const LottieAnimation = ({
+    animationData,
+}: {
+    animationData: Options["animationData"];
+}) => {
     const defaultOptions: Options = {
         loop: true,
         autoplay: true,
