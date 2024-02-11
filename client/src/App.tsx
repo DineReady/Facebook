@@ -3,6 +3,7 @@ import "./globals.css";
 import { OrderStatus } from "./types";
 import Lottie, { Options } from "react-lottie";
 import { DoneAnimation, Logo, PreparingAnimation } from "./assets";
+import { useTranslation } from "react-i18next";
 
 export default function App(): JSX.Element {
     const [orderStatus] = useState<OrderStatus>(OrderStatus.PREPARATION);
