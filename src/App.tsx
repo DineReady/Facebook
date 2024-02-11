@@ -42,7 +42,7 @@ export default function App(): JSX.Element {
     }
 
     useEffect(() => {
-        if (id?.length !== 36) {
+        if (id?.length !== 36 || !id) {
             // setImage() TODO @Gniewkoss: Add ERROR Lottie animation
             setOrderStatus(OrderStatus.ERROR);
             navigate("/");

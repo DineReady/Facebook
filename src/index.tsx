@@ -10,10 +10,12 @@ import { Error } from "./components";
 const root: Root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement,
 );
+
 root.render(
     <ChakraProvider>
         <BrowserRouter>
             <Routes>
+                {/* TODO: Loader component in <Route /> props */}
                 <Route path="*" element={<Error />} />
                 <Route path="/:id" element={<App />} />
             </Routes>
