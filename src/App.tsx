@@ -30,10 +30,7 @@ export default function App(): JSX.Element {
             setImage(
                 orderStatus === OrderStatus.READY
                     ? DoneAnimation
-                    : orderStatus === OrderStatus.PREPARATION
-                      ? PreparingAnimation
-                      : PreparingAnimation,
-                // todo: change last line to error lottie
+                    : PreparingAnimation,
             );
         } catch (error) {
             console.error(error);
@@ -41,6 +38,7 @@ export default function App(): JSX.Element {
         }
     }
 
+    // todo: App context to handle the order status error for <Error />
     useEffect(() => {
         if (id?.length !== 36 || !id) {
             // setImage() TODO @Gniewkoss: Add ERROR Lottie animation
