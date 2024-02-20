@@ -9,7 +9,7 @@ const Error = () => {
         <main>
             <Header />
             <LottieAnimation animationData={ErrorAnimation} />
-            <Response orderStatus="error" />
+            <Response orderStatus="Order doesn't exist" />
         </main>
     );
 };
