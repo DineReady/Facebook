@@ -2,13 +2,13 @@ import React from "react";
 import Header from "./Header";
 import LottieAnimation from "./LottieAnimation";
 import Response from "./Response";
+import ErrorAnimation from "../assets/lottie/error.json";
 
 const Error = () => {
     return (
         <main>
             <Header />
-            {/* TODO: Lottie for error in Lottie.tsx */}
-            <LottieAnimation animationData={null} />
+            <LottieAnimation animationData={ErrorAnimation} />
             <Response orderStatus="error" />
         </main>
     );
