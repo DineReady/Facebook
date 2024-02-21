@@ -7,6 +7,8 @@ import { DoneAnimation, PreparingAnimation } from "./assets";
 import { Header, LottieAnimation, Response } from "./components";
 import { NavigateFunction, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+// import { useTranslation } from "react-i18next";
+// import ChangeLanguageButton from "./components/ChangeLangBtn";
 
 interface Options {
     animationData: any;
