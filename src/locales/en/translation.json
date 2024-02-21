@@ -1,5 +1,5 @@
 {
-    "myPageTitle": "Multi Language Page in React with i18n",
-    "myHeader": "Welcome to React and react-i18next",
-    "errorMessage": "Order doesn't exist."
+    "done": "Order done",
+    "preparation": "preparation...",
+    "error": "Order doesn't exist."
 }

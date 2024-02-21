@@ -5,13 +5,13 @@ import ChangeLanguageButton from "./ChangeLangBtn";
 const Response = ({ orderStatus }: { orderStatus: string }) => {
     const { t } = useTranslation();
 
+    console.log("orderStatus", orderStatus);
+
     return (
         <div>
-            <h1 className="response-text">{orderStatus}</h1>
-            <h1>{t("myPageTitle")}</h1>
+            <h1 className="response-text">{t(orderStatus)}</h1>
+
             <ChangeLanguageButton />
-            <h2>{t("myHeader")}</h2>
-            <p>{t("errorMessage")}</p>
         </div>
     );
 };

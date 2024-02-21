@@ -1,5 +1,5 @@
 {
-    "myPageTitle": "To jest Wielojęzyczna Strona Reacta z react-i18next",
-    "myHeader": "Witaj na stronie Reacta z react-i18next",
-    "errorMessage": "Zamówienie nie zostało znalezione."
+    "complete": "Zamówienie zrealizowane",
+    "preparation": "Przygotowanie zamówienia",
+    "error": "Zamówienie nie zostało znalezione."
 }

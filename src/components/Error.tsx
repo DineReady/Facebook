@@ -12,7 +12,7 @@ const Error = () => {
         <main>
             <Header />
             <LottieAnimation animationData={ErrorAnimation} />
-            <Response orderStatus={t("errorMessage")} />
+            <Response orderStatus="error" />
         </main>
     );
 };
