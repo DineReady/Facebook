@@ -7,6 +7,7 @@ import {
     Logo,
     PreparingAnimation,
     firstAnimation,
+    thirdAnimation,
 } from "./assets";
 
 export default function App(): JSX.Element {
@@ -14,6 +15,7 @@ export default function App(): JSX.Element {
     const [animations] = useState<Options["animationData"][]>([
         PreparingAnimation,
         firstAnimation,
+        thirdAnimation,
     ]);
     const [currentAnimation, setCurrentAnimation] = useState<number>(0);
 

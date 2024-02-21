@@ -2,4 +2,11 @@ import DoneAnimation from "./done.json";
 import Logo from "./logo.svg";
 import PreparingAnimation from "./food.json";
 import firstAnimation from "./1.json";
-export { DoneAnimation, Logo, PreparingAnimation, firstAnimation };
+import thirdAnimation from "./git 3.json";
+export {
+    DoneAnimation,
+    Logo,
+    PreparingAnimation,
+    firstAnimation,
+    thirdAnimation,
+};
