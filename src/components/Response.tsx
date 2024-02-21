@@ -11,7 +11,7 @@ const Response = ({ orderStatus }: { orderStatus: string }) => {
             <h1>{t("myPageTitle")}</h1>
             <ChangeLanguageButton />
             <h2>{t("myHeader")}</h2>
-            <p>{t("myDescription")}</p>
+            <p>{t("errorMessage")}</p>
         </div>
     );
 };
