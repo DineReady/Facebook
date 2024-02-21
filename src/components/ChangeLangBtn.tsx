@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const ChangeLanguageButton = () => {
     const { i18n } = useTranslation();
 
-    const changeLanguage = (lng) => {
+    const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
     };
 
