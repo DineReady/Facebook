@@ -1,24 +1,19 @@
-import React from "react";
-import Lottie, { Options } from "react-lottie";
+import React, { FC } from "react";
+import Lottie from "lottie-react";
 
-const LottieAnimation = ({
-    animationData,
-}: {
-    animationData: Options["animationData"];
-}) => {
-    const defaultOptions: Options = {
-        loop: true,
-        autoplay: true,
-        animationData,
-    };
+interface LottieAnimationProps {
+    animationData: any;
+}
 
+const LottieAnimation: FC<LottieAnimationProps> = ({ animationData }) => {
     return (
         <div style={{ pointerEvents: "none" }}>
             <Lottie
-                options={defaultOptions}
+                loop
+                autoplay
+                animationData={animationData}
                 height={400}
                 width={400}
-                isStopped={false}
             />
         </div>
     );
