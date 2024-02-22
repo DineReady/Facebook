@@ -1,5 +1,5 @@
 {
-    "done": "Order done",
+    "complete": "Order done",
     "preparation": "preparation...",
     "error": "Order doesn't exist."
 }
