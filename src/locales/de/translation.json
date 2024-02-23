@@ -1,5 +1,5 @@
 {
     "complete": "Bestellung abgeschlossen",
-    "preparation": "Bestellung wird vorbereitet",
+    "pending": "Bestellung wird vorbereitet",
     "error": "Bestellung nicht gefunden."
 }

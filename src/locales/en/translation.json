@@ -1,5 +1,5 @@
 {
     "complete": "Order done",
-    "preparation": "preparation...",
+    "pending": "Preparation in progress",
     "error": "Order doesn't exist."
 }
