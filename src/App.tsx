@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./globals.css";
 import { OrderStatus } from "./types";
-import { DoneAnimation, PreparingAnimation } from "./assets";
+import { DoneAnimation, PreparingAnimation, ErrorAnimation } from "./assets";
 import { Header, LottieAnimation, Response } from "./components";
 import { NavigateFunction, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
@@ -30,9 +30,14 @@ export default function App(): JSX.Element {
                 console.log(order.data);
                 setOrderStatus(orderStatus as OrderStatus);
                 setImage(
-                    orderStatus === "DONE" ? DoneAnimation : PreparingAnimation,
+                    orderStatus === "complete"
+                        ? DoneAnimation
+                        : orderStatus === "pending"
+                          ? PreparingAnimation
+                          : ErrorAnimation,
                 );
             } catch (error) {
+                navigate("/");
                 console.error(error);
             }
         }
