@@ -1,9 +1,6 @@
 import React, { FC } from "react";
 import Lottie from "lottie-react";
-
-interface LottieAnimationProps {
-    animationData: any;
-}
+import { LottieAnimationProps } from "../types";
 
 const LottieAnimation: FC<LottieAnimationProps> = ({ animationData }) => {
     return (
