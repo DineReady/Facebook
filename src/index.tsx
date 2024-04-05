@@ -16,7 +16,6 @@ root.render(
     <ChakraProvider>
         <BrowserRouter>
             <Routes>
-                {/* TODO: Loader component in <Route /> props */}
                 <Route path="*" element={<Error />} />
                 <Route path="/:id" element={<App />} />
             </Routes>
