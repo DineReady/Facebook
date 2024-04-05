@@ -10,7 +10,7 @@
         @apply w-screen max-h-40;
     }
     .response-text {
-        @apply text-3xl font-semibold text-center;
+        @apply font-semibold text-center p-6 mt-10 text-4xl;
     }
 }
 

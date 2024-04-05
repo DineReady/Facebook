@@ -6,17 +6,24 @@
         "@chakra-ui/react": "^2.8.2",
         "@emotion/react": "^11.11.3",
         "@emotion/styled": "^11.11.0",
+        "@fortawesome/fontawesome-free": "^6.5.1",
+        "@fortawesome/free-brands-svg-icons": "^6.5.1",
+        "@fortawesome/free-solid-svg-icons": "^6.5.1",
+        "@fortawesome/react-fontawesome": "^0.2.0",
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
         "@types/jest": "^27.5.2",
         "@types/react": "^18.2.51",
         "eslint": "^8.56.0",
+        "fortawesome": "^0.0.1-security",
         "framer-motion": "^11.0.3",
+        "i18next": "^23.9.0",
+        "lottie-react": "^2.4.0",
         "prettier": "^3.2.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-lottie": "^1.2.4",
+        "react-i18next": "^14.0.5",
         "react-scripts": "5.0.1",
         "typescript": "^4.9.5",
         "web-vitals": "^2.1.4"
@@ -26,7 +33,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "fmt": "npx prettier --write ."
+        "fmt": "npx prettier --write .",
+        "dev": "react-scripts start"
     },
     "eslintConfig": {
         "extends": [
@@ -50,7 +58,9 @@
         "@types/node": "^20.11.16",
         "@types/react-dom": "^18.2.18",
         "@types/react-lottie": "^1.2.10",
+        "axios": "^1.6.7",
         "react-router-dom": "^6.22.0",
-        "tailwindcss": "^3.4.1"
+        "tailwindcss": "^3.4.1",
+        "zod": "^3.23.0-canary.20231004T224911"
     }
 }
